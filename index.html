@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/slider-theme.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/animations.css" rel="stylesheet" />
+    <link href="css/animations-ie-fix.css" rel="stylesheet" />
 </head>
 <body>
     <header class="header">
@@ -26,19 +28,19 @@
         </div>
         <nav class="header__nav" role="navigation">
             <ul class="header__ul-items">
-                <li class="header__li-item"><a class="header__anchor" href=""><span class="header__text">INÍCIO</span></a></li>
-                <li class="header__li-item"><a class="header__anchor" href=""><span class="header__text">SOBRE</span></a></li>
-                <li class="header__li-item"><a class="header__anchor" href=""><span class="header__text">FORMAÇÃO</span></a></li>
-                <li class="header__li-item"><a class="header__anchor" href=""><span class="header__text">HABILIDADES</span></a></li>
+                <li class="header__li-item"><a class="header__anchor" href="#start"><span class="header__text">INÍCIO</span></a></li>
+                <li class="header__li-item"><a class="header__anchor" href="#about"><span class="header__text">SOBRE</span></a></li>
+                <li class="header__li-item"><a class="header__anchor" href="#formation"><span class="header__text">FORMAÇÃO</span></a></li>
+                <li class="header__li-item"><a class="header__anchor" href="#skills"><span class="header__text">HABILIDADES</span></a></li>
                 <li class="header__li-item"><a href="http://goo.gl/forms/nlzkVPuEm1Yk6cEy1" target="_blank" class="header__anchor" href=""><span class="header__text">CONTATO</span></a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <article class="start">
-            <h1 class="start__title">Thiago Alex</h1>
-            <h2 class="start__sub-title">Desenvolvedor Front-End</h2>
-            <div>
+        <article class="start" id="start">
+            <h1 class="start__title opacity">Thiago Alex</h1>
+            <h2 class="start__sub-title opacity">Desenvolvedor Front-End</h2>
+            <div class="opacity">
                 <a href="https://www.facebook.com/thiago.alexb" target="_blank">
                     <img src="img/icon/fb.svg" class="start__redes" />
                 </a>
@@ -49,12 +51,12 @@
                     <img src="img/icon/github.svg" class="start__redes" />
                 </a>
             </div>
-            <div class="start__arrow"></div>
+            <div class="start__arrow opacity"></div>
         </article>
-        <article class="about">
-            <h1 class="about__title">SOBRE</h1>
+        <article class="about animatedParent" id="about">
+            <h1 class="about__title animated fadeInDownShort delay-250">SOBRE</h1>
             <hr class="about__first-hr">
-            <p class="about__text">
+            <p class="about__text animated fadeInDownShort delay-250">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Aliquam luctus, risus ut porttitor commodo, velit arcu euismod neque,
                 eu tincidunt neque dolor sed diam. Etiam condimentum est est, quis aliquam dui eleifend at.
@@ -66,9 +68,9 @@
             </p>
             <hr class="about__second-hr">
         </article>
-        <article class="formation">
-            <h1 class="formation__title">FORMAÇÃO</h1>
-            <div class="formation__container-courses">
+        <article class="formation animatedParent" id="formation">
+            <h1 class="formation__title animated fadeInDownShort delay-250">FORMAÇÃO</h1>
+            <div class="formation__container-courses animated fadeInDownShort delay-250">
                 <div class="formation__first-container">
                     <div class="formation__divider">
                         <div>
@@ -103,7 +105,7 @@
             </div>
 
         </article>
-        <article class="skills">
+        <article class="skills" id="skills">
             <h1 class="skills__title">HABILIDADES</h1>
             <div class="skills__container">
                 <div class="skills__container-bars">
@@ -196,5 +198,6 @@
     </main>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="js/css3-animate-it.js"></script>
 </body>
 </html>
