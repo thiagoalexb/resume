@@ -1,6 +1,6 @@
 //Custom JS
-$(document).ready(function () {
-    $('.fade-start').fadeIn(3000);
+$(window).load(function () {
+    $('.loading').show();
     $('.header__burguer, .header__anchor').click(function (e) {
         if ($(window).outerWidth() < 713)
             $('.header__nav, .header__burguer').toggleClass('header__toggled');
@@ -84,4 +84,9 @@ $(document).ready(function () {
     setHeightArticle();
     setWidthPercent();
     verifyScroll();
+    $('.loading').hide();
+    $('.header').show();
+    $('.main').show();
+    $('.footer').show();
+    $('.fade-start').fadeIn(3000);
 });
