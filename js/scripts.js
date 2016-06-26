@@ -1,10 +1,11 @@
 //Custom JS
 $(document).ready(function () {
-    $('.hide').fadeIn(3000);
+    $('.fade-start').fadeIn(3000);
     $('.header__burguer, .header__anchor').click(function (e) {
         if ($(window).outerWidth() < 713)
             $('.header__nav, .header__burguer').toggleClass('header__toggled');
-        e.preventDefault();
+        if (!$(this).attr('target'))
+            e.preventDefault();
     });
 
 
@@ -26,13 +27,12 @@ $(document).ready(function () {
         else if ((scrollTop + 100) >= about.offset().top && (scrollTop + 100) < formation.offset().top)
             setActiveMenu('about');
         else if ((scrollTop + 100) >= formation.offset().top && (scrollTop + 100) < skills.offset().top) {
-            if ((scrollTop + 108) >= skills.offset().top) {
+            if ((scrollTop + 115) >= skills.offset().top) 
                 setActiveMenu('skills');
-            }
-            else {
+            else 
                 setActiveMenu('formation');
-            }
-        }
+        }else if((scrollTop + 100) > skills.offset().top)
+            setActiveMenu('skills');
     }
 
     function setActiveMenu(href) {
@@ -48,7 +48,6 @@ $(document).ready(function () {
                 $('html, body').animate({
                     scrollTop: target.offset().top - ($(window).outerWidth() > 713 ? 100 : 70)
                 }, 1400);
-                //setActiveMenu($(target).attr('id'));
                 return false;
             }
         }
