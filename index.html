@@ -10,11 +10,7 @@
     <meta name="robots" content="all">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/slider-theme.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="css/animations.css" rel="stylesheet" />
-    <link href="css/animations-ie-fix.css" rel="stylesheet" />
 </head>
 <body>
     <header class="header">
@@ -32,15 +28,15 @@
                 <li class="header__li-item"><a class="header__anchor" href="#about"><span class="header__text">SOBRE</span></a></li>
                 <li class="header__li-item"><a class="header__anchor" href="#formation"><span class="header__text">FORMAÇÃO</span></a></li>
                 <li class="header__li-item"><a class="header__anchor" href="#skills"><span class="header__text">HABILIDADES</span></a></li>
-                <li class="header__li-item"><a href="http://goo.gl/forms/nlzkVPuEm1Yk6cEy1" target="_blank" class="header__anchor" href=""><span class="header__text">CONTATO</span></a></li>
+                <li class="header__li-item"><a class="header__anchor" href="http://goo.gl/forms/nlzkVPuEm1Yk6cEy1" target="_blank"><span class="header__text">CONTATO</span></a></li>
             </ul>
         </nav>
     </header>
     <main>
         <article class="start" id="start">
-            <h1 class="start__title opacity">Thiago Alex</h1>
-            <h2 class="start__sub-title opacity">Desenvolvedor Front-End</h2>
-            <div class="opacity">
+            <h1 class="start__title opacity hide">Thiago Alex</h1>
+            <h2 class="start__sub-title opacity hide">Desenvolvedor Front-End</h2>
+            <div class="opacity hide">
                 <a href="https://www.facebook.com/thiago.alexb" target="_blank">
                     <img src="img/icon/fb.svg" class="start__redes" />
                 </a>
@@ -51,26 +47,27 @@
                     <img src="img/icon/github.svg" class="start__redes" />
                 </a>
             </div>
-            <div class="start__arrow opacity"></div>
+            <div class="start__arrow"></div>
         </article>
-        <article class="about animatedParent" id="about">
-            <h1 class="about__title animated fadeInDownShort delay-250">SOBRE</h1>
+
+        <article class="about" id="about">
+            <h1 class="about__title">SOBRE</h1>
             <hr class="about__first-hr">
-            <p class="about__text animated fadeInDownShort delay-250">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Aliquam luctus, risus ut porttitor commodo, velit arcu euismod neque,
-                eu tincidunt neque dolor sed diam. Etiam condimentum est est, quis aliquam dui eleifend at.
-                Maecenas at magna in arcu mattis gravida. Sed molestie euismod ligula, at suscipit odio ornare eu.
-                In non elit ac odio sagittis scelerisque. Cras venenatis nunc a odio convallis, at efficitur ipsum facilisis.
-                Cras vitae porttitor neque. Praesent feugiat lacinia erat vel ultricies.
-                Cras bibendum quam ac sem elementum, sed auctor mi pharetra. Proin vel enim quam.
-                Vestibulum sit amet nisl elit.
+            <p class="about__text">
+                Hey guys! Me chamo Thiago e sou Front-end Developer, sou de Campo Laaargo - PR.<br/><br />
+                Gosto muito de tecnologia  e sempre busco ver o que está em alta. Também gosto muito de jogos, tipo Lolzinho haha,
+                também gosto de outras coisas tipo Indie Rock, series, filmes, duolingo, podcasts e streams.<br /><br />
+                Me formei a pouco tempo mas já estou atuando como Front-end a um ano e meio. Atualmente estou fazendo pós graduação  em Aplicativos Móveis e Computação em Nuvem.<br />
+                Tenho um grande interesse em Design Digital e algum dia vou aprender, algum dia...<br /><br />
+
+                Vocês podem saber um pouco mais sobre mim pelo <a class="about__link" href="tel:+554196626982">Whats</a> ou por <a class="about__link" href="skype:thiago.alexb@hotmail.com?call">Skype</a> ou por <a class="about__link" href="mailto:thiago.alexb@hotmail.com">E-mail</a>. Ou também pelas redes sociais ali em cima =D
             </p>
             <hr class="about__second-hr">
         </article>
-        <article class="formation animatedParent" id="formation">
-            <h1 class="formation__title animated fadeInDownShort delay-250">FORMAÇÃO</h1>
-            <div class="formation__container-courses animated fadeInDownShort delay-250">
+
+        <article class="formation" id="formation">
+            <h1 class="formation__title">FORMAÇÃO</h1>
+            <div class="formation__container-courses">
                 <div class="formation__first-container">
                     <div class="formation__divider">
                         <div>
@@ -103,8 +100,8 @@
                     </div>
                 </div>
             </div>
-
         </article>
+
         <article class="skills" id="skills">
             <h1 class="skills__title">HABILIDADES</h1>
             <div class="skills__container">
@@ -156,26 +153,32 @@
 
                         <figure class="item">
                             <img src="img/icon/html.svg" class="skills_icon" />
+                            <h4>Semântica</h4>
                         </figure>
 
                         <figure class="item">
                             <img src="img/icon/css.svg" class="skills_icon" />
+                            <h4>SASS</h4>
                         </figure>
 
                         <figure class="item">
                             <img src="img/icon/javascript.svg" class="skills_icon" />
+                            <h4>AngularJS, Jquery, Ionic</h4>
                         </figure>
 
                         <figure class="item">
                             <img src="img/icon/csharp.svg" class="skills_icon" />
+                            <h4>Entity Framework, ASP.NET MVC, WebFormss</h4>
                         </figure>
 
                         <figure class="item">
                             <img src="img/icon/git.svg" class="skills_icon" />
+                            <h4>SVN, Team Foundation e Git</h4>
                         </figure>
 
                         <figure class="item">
                             <img src="img/icon/sql.svg" class="skills_icon" />
+                            <h4>MS SQL Server e Oracle</h4>
                         </figure>
 
                         <figure class="item">
@@ -196,8 +199,11 @@
             </div>
         </article>
     </main>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+    <footer class="footer">
+        Desenvolvido por Thiago Alex :)
+        <span></span>
+    </footer>
+    <script type="text/javascript" src="js/jquery-2.2.0.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    <script src="js/css3-animate-it.js"></script>
 </body>
 </html>
