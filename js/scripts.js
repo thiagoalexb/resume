@@ -1,5 +1,5 @@
 //Custom JS
-$(window).load(function () {
+$(document).ready(function () {
     $('.fade-start').fadeIn(3000);
     $('.header__burguer, .header__anchor').click(function (e) {
         if ($(window).outerWidth() < 713)
