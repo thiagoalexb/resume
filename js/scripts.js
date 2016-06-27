@@ -53,7 +53,11 @@ $(document).ready(function () {
         }
     });
 
-    
+    // Sumir Header scroll down
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('header').outerHeight();
     var start = $('#start');
     var about = $('#about');
     var formation = $('#formation');
@@ -62,6 +66,9 @@ $(document).ready(function () {
     var element = $('.opacity');
     var range = 200;
     $(window).on('scroll', function () {
+        //Sumir Header
+        if ($(window).outerWidth() <= 713)
+            didScroll = true;
         //opacity Title
         scrollTop = $(window).scrollTop();
         var offset = element.offset().top;
@@ -80,6 +87,36 @@ $(document).ready(function () {
         //Set active menu
         verifyScroll();
     });
+
+    setInterval(function () {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+
+        // Make sure they scroll more than delta
+        if (Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastScrollTop && st > navbarHeight) {
+            // Scroll Down
+            $('.header').addClass('header__top');
+        } else {
+            // Scroll Up
+            if (st + $(window).height() < $(document).height()) {
+                $('.header').removeClass('header__top');
+            }
+        }
+
+        lastScrollTop = st;
+    }
+
 
     setHeightArticle();
     setWidthPercent();
