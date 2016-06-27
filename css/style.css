@@ -367,8 +367,8 @@ ul {
     text-align: left;
     color: #fff;
     letter-spacing: 1px;
-    font-size: 1.7em;
-    margin: 2% 18%;
+    font-size: 1.3em;
+    margin: 2% 14%;
 }
 
 .about__second-hr {
@@ -439,12 +439,12 @@ ul {
 
 .formation_icon-center,
 .formation_icon {
-    max-width: 90px;
+    max-width: 75px;
     margin: 0 auto;
 }
 
 .formation__course-description {
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-align: center;
 }
 
@@ -541,6 +541,7 @@ ul {
 
 .skills__title-info {
     margin-bottom: 0;
+    font-size:1.3em;
 }
 
 .skills__progressbar {
