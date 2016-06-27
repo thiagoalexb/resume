@@ -1,6 +1,6 @@
 /*FONT*/
 @import url(https://fonts.googleapis.com/css?family=Six+Caps);
-
+@import url(https://fonts.googleapis.com/css?family=Economica);
 /*CONFIG*/
 * {
     font-weight: normal;
@@ -16,7 +16,7 @@ html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: economica, sans-serif;
+    font-family: 'Economica', sans-serif;
 }
 
 body {
@@ -233,7 +233,7 @@ ul {
 /*START*/
 .start {
     background-image: url("../img/bg/bg-main.jpg");
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center center;
     background-size: cover;
     display: flex;
@@ -320,6 +320,16 @@ ul {
     .start__sub-title {
         font-size: 2em;
     }
+
+    .start {
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (max-width: 315px) {
+    .start__title {
+        font-size: 3em;
+    }
 }
 
 /*ABOUT*/
@@ -354,7 +364,7 @@ ul {
 }
 
 .about__text {
-    text-align: justify;
+    text-align: left;
     color: #fff;
     letter-spacing: 1px;
     font-size: 1.7em;
@@ -418,7 +428,6 @@ ul {
 .formation__divider {
     display: flex;
     align-items: center;
-    height: 50%;
     flex-direction: column;
     margin-bottom: 20px;
 }
@@ -473,11 +482,13 @@ ul {
     .formation__divider {
         justify-content: center;
         flex-direction: row;
+        height: 50%;
         margin: 0 20px;
     }
 
     .formation__center {
         margin-top: 0;
+        height: 100%;
     }
 
     .formation_icon-center,
