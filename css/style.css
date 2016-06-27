@@ -50,6 +50,14 @@ ul {
     height: 70px;
     position: fixed;
     z-index: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.header__top{
+    opacity: 0;
 }
 
 .header__button-action {
@@ -262,6 +270,7 @@ ul {
     margin: 0 10px;
 }
 
+.main__btn-top,
 .start__arrow {
     position: absolute;
     color: #fff;
@@ -368,7 +377,7 @@ ul {
     color: #fff;
     letter-spacing: 1px;
     font-size: 1.3em;
-    margin: 2% 14%;
+    margin: 2% 11%;
 }
 
 .about__second-hr {
@@ -452,6 +461,9 @@ ul {
         font-weight: bolder;
     }
 
+.formation__desc {
+    font-size: .85em;
+}
 
 @media screen and (min-width: 730px) {
 
@@ -505,7 +517,15 @@ ul {
     }
 
     .formation__fix-align {
-        margin-left: -47px;
+        margin-left: -125px;
+    }
+
+    .formation__course-description {
+        font-size: 1.3em;
+    }
+
+    .formation__desc {
+        font-size: 1em;
     }
 }
 
@@ -541,7 +561,7 @@ ul {
 
 .skills__title-info {
     margin-bottom: 0;
-    font-size:1.3em;
+    font-size: 1.3em;
 }
 
 .skills__progressbar {
