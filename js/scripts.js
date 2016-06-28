@@ -53,6 +53,16 @@ $(document).ready(function () {
         }
     });
 
+    $(".contact__input").focus(function () {
+        $(this).parent().addClass("contact__field-active contact__field-completed");
+    });
+
+    $(".contact__input").focusout(function () {
+        if ($(this).val() === "")
+            $(this).parent().removeClass("contact__field-completed");
+        $(this).parent().removeClass("contact__field-active");
+    })
+
     // Sumir Header scroll down
     var didScroll;
     var lastScrollTop = 0;
